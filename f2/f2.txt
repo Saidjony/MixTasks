@@ -1,0 +1,25 @@
+// f2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+
+#include <iostream>
+#include<math.h>
+#include<stdafx.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "russian");
+
+	int a[25];
+
+	for (size_t i = 0; i < 25; i++)
+	{
+		a[i] = 5 - pow(i, 2);
+	}
+
+	for (size_t i = 0; i < 25; i++)
+	{
+		cout <<i<<") " << a[i] << endl;
+	}
+
+}

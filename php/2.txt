@@ -1,0 +1,23 @@
+<?php
+
+
+function isNumberInRange($num) //функция для проверки элементы массива
+{
+    if($num>0 and $num<10)
+    {
+        return true;
+    } 
+    return false;
+}
+
+$mass=array(1,2,6,7,0,12,13,16,30); //массив со своими элементами
+$newmass=array();
+foreach ($mass as $value)  //цикл для каждого элементы массива
+{
+    if(isNumberInRange($value)) //проверка через функции
+    {
+        $newmass[]=$value; //добавление нового элемента в новый массив
+        echo($value); //вывод результата
+        echo("\n");
+    } 
+}

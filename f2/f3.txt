@@ -1,0 +1,30 @@
+// f2.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
+//
+
+#include <iostream>
+#include<math.h>
+#include<time.h>
+#include<stdafx.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "russian");
+	srand(time(0));
+	double a[15];
+	 
+	for (size_t i = 0; i < 15; i++)
+	{
+		a[i]=(double)(-20 + rand() % 50);
+	}
+	for (size_t i = 0; i < 15; i++)
+	{
+		cout << a[i] << " ";
+	}
+	cout << endl;
+	for (size_t i = 0; i < 15; i++)
+	{
+		if (a[i] < 15) a[i] = 100;
+		cout << a[i] <<  " ";
+	}
+}

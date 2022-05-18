@@ -1,0 +1,23 @@
+<?php
+
+$mass=array(1,2,3,4,5,3,8,43,748,145,45,36,4,89); //вводимий массив
+$newmass=array();
+foreach ($mass as $value)
+{
+    if(isEven($value)) //проверяем элемент массива на четность
+    {
+        $newmass[] = $value; // добавляем четные элементы массива в новый массив
+        echo($value);
+        echo("\n");
+    }
+}
+  
+function isEven($even) //функция для проверки четности
+{
+    if($even % 2 == 0)
+    {
+        return true;
+    } 
+    return false;
+}
+ 

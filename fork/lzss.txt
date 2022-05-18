@@ -1,0 +1,118 @@
+dictFill = ""
+encLength = 0
+dictSize = 8
+bufferSize = 5
+ 
+compressFile = open("D:\\fork\\1.txt", "r")
+compressedFile = open("D:\\fork\\2.txt", "w")
+sampleString = compressFile.read()
+compressFile.close()
+ 
+ 
+def LZSS(string, encLength, bufferSize, dictSize, dictFill):
+  dictionaryAndString = [ dictFill ] * dictSize + list(string)
+  compressedString = [ [], [], [] ]
+ 
+  i = 0
+  while i < len(string):
+    buffer = string[i:bufferSize+i]
+    dictionary = ''.join(dictionaryAndString[i:dictSize+i])
+    found = False
+   # print(dictionary)
+   # print(buffer)
+   # print(encLength)
+    for j in range(len(buffer) ,0,-1):
+      searched = buffer[:j]
+      size = len(searched)
+      if (size < encLength): break
+      offset = dictionary.find(searched)
+      if offset > -1:
+        found = True
+        compressedString[0].append(found)
+        compressedString[1].append(offset)
+        compressedString[2].append(size)
+        #print(str(j-1)+"<"+str(size)+","+str(offset)+">")
+        break
+    print(searched)
+   # print(offset)
+    if not found:
+      compressedString[0].append(found)
+      compressedString[1].append(searched)
+      compressedString[2].append(size)
+
+    i = i + size
+   
+  return compressedString
+ 
+ 
+def decompressLZSS(compressedStr, dictFill, dictSize):
+  dictionaryAndString = [ dictFill ] * dictSize
+  decompressedString = []
+ 
+  for i in range(len(compressedStr[0])):
+    if (compressedStr[0][i]):
+      offset = compressedStr[1][i]
+      size = compressedStr[2][i]
+      found = dictionaryAndString[offset:size + offset]
+      decompressedString = decompressedString + found
+      dictionaryAndString = dictionaryAndString + found
+      
+    else:
+      dictionaryAndString = dictionaryAndString + list(compressedStr[1][i])
+      decompressedString = decompressedString + list(compressedStr[1][i])
+      
+    dictionaryAndString = dictionaryAndString[len(dictionaryAndString) - dictSize :]
+ 
+  return ''.join(decompressedString)
+ 
+ 
+def saveToFile(saveFile, compressedStr):
+  if saveFile.closed:
+    print("File closed")
+  else:
+    for tab in compressedStr:
+      for value in tab:
+        value = str(value)
+        value = repr(value)
+        saveFile.write(str(value) + '\t')
+      saveFile.write('\n')
+    saveFile.close()
+ 
+def printBinaryForm(compStr):
+  for i in range(len(compStr[0])):
+  #  print(int(compStr[0][i]), end=" ")
+   # print("".join(format(ord(x), 'b') for x in str(compStr[1][i])), end=" ")
+    #print(format(compStr[2][i], 'b'), end=" ")   
+    print(str(len(str(compStr[0][i]))))
+ 
+ 
+def main():
+  print ("before compression:\n{}\n".format(sampleString))
+ 
+  compStr = LZSS(sampleString, encLength, bufferSize, dictSize, dictFill)
+  
+ 
+  print("compression:")
+  print('found:', end='\t')
+  for i in range(len(compStr[0])):
+    print(repr(str(compStr[0][i])), end='\t')
+  
+  print('\noffset:', end='\t')
+  for i in range(len(compStr[1])):
+    print(repr(str(compStr[1][i])), end='\t')
+  
+  print('\nlength:', end='\t')
+  for i in range(len(compStr[2])):
+    print(repr(str(compStr[2][i])), end='\t')
+ 
+  saveToFile(compressedFile, compStr)
+ 
+  decompressed = decompressLZSS(compStr, '_', 8)
+ 
+  print("\n\nafter decompression:\n{}".format(decompressed))
+ 
+  print("\nbit form:")
+  printBinaryForm(compStr)
+ 
+
+main() 

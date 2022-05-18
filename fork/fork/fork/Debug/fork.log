@@ -1,0 +1,4 @@
+﻿  fork.cpp
+D:\fork\fork\fork\fork\fork.cpp(146,20): warning C4018: <: несоответствие типов со знаком и без знака
+MSVCRTD.lib(exe_main.obj) : error LNK2019: ссылка на неразрешенный внешний символ _main в функции "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ).
+D:\fork\fork\fork\Debug\fork.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

@@ -1,0 +1,5 @@
+﻿  fork.cpp
+  The contents of <string_view> are available only with C++17 or later.
+D:\fork\fork\fork\fork\fork.cpp(35,43): warning C4267: =: преобразование из "size_t" в "unsigned char"; возможна потеря данных
+D:\fork\fork\fork\fork\fork.cpp(35,66): warning C4267: =: преобразование из "size_t" в "unsigned char"; возможна потеря данных
+  fork.vcxproj -> D:\fork\fork\fork\x64\Debug\fork.exe

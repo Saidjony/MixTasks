@@ -1,0 +1,18 @@
+<?php
+
+$InputInt=123456;
+
+function getDigitsSum( $digits) //функция для суммы цифри число
+{
+    $Sum=0;
+    while(strlen((string)$digits) >1) //цикл до длина число > 1
+    {
+        $dignum=$digits % 10; // делим на 10 и возмем остаток, тем самим возмем последную цифру число
+        $Sum +=$dignum; //суммируем последную цифру
+        $digits /=10; // и отнимаем последную  цифру
+    }
+    return $Sum; //возвращаем сумму 
+}
+
+echo(getDigitsSum($InputInt));
+ 

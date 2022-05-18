@@ -1,0 +1,36 @@
+<?php
+
+$InputIntOne =100; //вводымий число
+$InputIntTwo =250; 
+foreach (getCommonDivisors($InputIntOne,$InputIntTwo) as $value) 
+{
+    echo($value); //вывод результата
+    echo("\n");
+}
+  
+function getDivisors($even) //функция для вычисление делителей
+{
+    $newmass=array();
+    for($i=1;$i<$even / 2+1;$i++) // цикл от 1 до  even /2+1, так как проверят половину не надо
+    {
+        if($even % $i == 0) //проверка делимости even на i, если делится без остаток то добавляем i к новому массиву
+        {
+            $newmass[] = $i; 
+        }
+    }
+    $newmass[] = $even;
+    return $newmass;
+}
+
+function getCommonDivisors($num1,$num2) // массив общих делителей
+{
+    $newmass=array();
+    for($i=1;$i<$num2+$num1;$i++)
+    {
+        if($num1 % $i==0 and $num2 % $i==0) //если оба число делится на i без остатка то добавляем i к новому массиву
+        {
+            $newmass[] = $i;
+        }
+    }
+    return $newmass; //возвращение массива общих делителей 
+}

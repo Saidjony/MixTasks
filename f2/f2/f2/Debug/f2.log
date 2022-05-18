@@ -1,0 +1,3 @@
+﻿  f2.cpp
+D:\fork\f2\f2\f2\f2.cpp(10,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  f2.vcxproj -> D:\fork\f2\f2\Debug\f2.exe

@@ -1,0 +1,25 @@
+<?php
+
+$InputInt =100; //вводымий число
+
+
+foreach (getDivisors($InputInt) as $value) 
+{
+    echo($value); //вывод результата
+    echo("\n");
+}
+  
+function getDivisors($even) //функция для вычисление делителей
+{
+    $newmass=array();
+    for($i=1;$i<$even / 2+1;$i++) // цикл от 1 до  even /2+1, так как проверят половину не надо
+    {
+        if($even % $i == 0) //проверка делимости even на i, если делится без остаток то добавляем i к новому массиву
+        {
+            $newmass[] = $i; 
+        }
+    }
+    $newmass[] = $even;
+    return $newmass;
+}
+ 

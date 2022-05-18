@@ -1,0 +1,3 @@
+﻿  task1.cpp
+D:\fork\f1\task1\task1\task1.cpp(38,23): warning C4018: <: несоответствие типов со знаком и без знака
+  task1.vcxproj -> D:\fork\f1\task1\Debug\task1.exe
