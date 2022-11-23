@@ -1,0 +1,26 @@
+#include <iostream>
+#include<math.h>
+
+
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "ru"); //подключаем русские буквы
+    cout << "вводите кол-во букв ";
+    int n; cin >> n; //вводим кол-во букв в строке
+    int count = 0; //счетчик равен 0 
+    for (size_t i = 0; i < n; i++) //цикл для каждой буквы из строке
+    {
+        char c; cin >> c; //вводим букву строка
+        if (c == 'r' || c=='k' || c=='t') // сравниваем что вводимий нашим буквам является r,k или t если да
+        {
+            count++; // то счетчик на 1 больше 
+        }
+    }
+    
+    cout << "r k t в тексте "<< count<<" раз" << endl; //вводим счетчик
+     
+    system("pause");
+    return 0;
+}
+ 

@@ -1,0 +1,24 @@
+есть класс srting_t, мы его реализуем с помощью того же метода. этот класс включает в себе метод appendchar этого класса
+у этого класса есть методы как gethashcode(), и перегрузка операторов +,==,!=
+
+есть класс menuhandler. он включаеть в себе метода addchar, indexofstring, comparestrings,printstrings,clearstrings. все эти методы как их название вычисляет соответсвуюшый данным 
+
+
+
+в главном коде
+	объявить menuhandler как ManuHandler
+		strA как string_t()
+		strB как string_t()
+
+
+есть инфо о числах которое соответсвует определенному методу
+	  	Console.WriteLine("Menu:");
+                Console.WriteLine("1. Add char to A");
+                Console.WriteLine("2. Add char to B");
+                Console.WriteLine("3. Index of A");
+                Console.WriteLine("4. Index of B");
+                Console.WriteLine("5. Compare strings");
+                Console.WriteLine("6. Print strings");
+                Console.WriteLine("7. Clear strings");
+                Console.WriteLine("0. Exit");
+с помощью входных данных которое пользовател вводить мы вызиваем определенному их методу

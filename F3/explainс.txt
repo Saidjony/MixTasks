@@ -1,0 +1,29 @@
+перечисление apartmenttype, buildingtype
+есть абстрактный класс CBaseBuilding, которые включаеть в себе методы как getbuildingtype(), getadress() и стринг m_sadres
+
+	c помощью этого класса мы унаследуем класс cresidentbuilding, которые включаеть методы cbasebuilding
+	c помощью этого класса унаследуем еще один класс ccomercialbuilding, которые имеет методы как validateresident(), getbuildingtype
+
+есть класс cmanagementcompany, которые внутри реализованы класс cbuildingcomparer как унаследия icomparer
+есть метод как comparebuildingtype, которое принимаеть 2 аргумента чтобы сравнит их
+
+в главном коде мы вызиваем метод через класса GlobalVars.g_menu.startroutine();
+
+
+
+класс cmenu
+	Console.WriteLine("Main Menu:");
+        Console.WriteLine("1. Add residential building");
+        Console.WriteLine("2. Add commercial building");
+        Console.WriteLine("3. Sort buildings");
+        Console.WriteLine("4. Print buildings");
+        Console.WriteLine("5. Print first 3 buildings");
+        Console.WriteLine("6. Print last 4 addresses");
+        Console.WriteLine("7. Average num. of residents");
+        Console.WriteLine("8. Serialize to XML");
+        Console.WriteLine("9. Deserialize from XML");
+        Console.WriteLine("0. Exit");
+
+c помощью этого кода char menu_key = Console.ReadKey().KeyChar; мы возмем символ которое пользователь ввел
+через switch case мы определим какому знаку соответсвует этот метод, и в случае соответсвие вызиваем его
+

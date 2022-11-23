@@ -1,0 +1,46 @@
+unit Unit1;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TForm1 = class(TForm)
+    Label1: TLabel;
+    Edit1: TEdit;
+    Button1: TButton;
+    procedure Button1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Form1: TForm1;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm1.Button1Click(Sender: TObject);
+var msg:string;
+var num:integer;
+begin
+   num:=StrToInt(Edit1.Text);
+   msg:='ввели неправилный формат дня недели!';
+   if((num>0) and (num<8)) then
+   case num of
+    1:msg:='рабочий день';
+    2:msg:='рабочий день';
+    3:msg:='рабочий день';
+    4:msg:='рабочий день';
+    5:msg:='рабочий день';
+    6:msg:='выходной день - суббота';
+    7:msg:='выходной день - воскресенье';
+  end;
+  ShowMessage(msg);
+  end;
+end.

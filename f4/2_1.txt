@@ -1,0 +1,27 @@
+#include <iostream>
+#include<math.h>
+ 
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "ru");
+    cout << "вводите целое число а1,а2,а3 "; // вводим три числа
+    int a[3]; cin >> a[0]>>a[1]>>a[2]; 
+    int** A=new int*[3]; //создаем 2мерный массив размера 3х3
+    for (size_t i = 0; i < 3; i++) // цикл для инициализации массива
+    {
+        A[i] = new int[3];
+        for (size_t j = 0; j < 3; j++)
+        { 
+            A[i][j] = a[i] - 3 * a[j]; //каждий элемент посчитаем по формуле
+            cout << A[i][j] << " "; // выводим массив
+        }
+        cout << endl;
+    }
+    
+   
+     
+    system("pause");
+    return 0;
+}
+ 

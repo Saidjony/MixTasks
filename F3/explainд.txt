@@ -1,0 +1,10 @@
+есть класс globalvars, которое инициализируеть class ctablebuilder, cwebscanner
+
+class ctablebuilder() включаеть в себе методы, которые инициализируеть таблицу
+класс cwebscanner() унаследуеть от  idisposeable и имеет методы как ProcessContactsHandled, ProcessContacts, Process, AttachDelegate_ProcessContactsHandled, idspose
+
+
+в главном коде
+	инициализируем таблицы с помощбю нами созданных классов
+	сканируем сайт 
+	выводим наши результаты в нашу таблицу

@@ -1,0 +1,21 @@
+есть класс homelibray, он включаеть в себе разные методы как добавление(add), удаление(remove), сортировка по имени(sortbyname), сортировка по году(sortbyyear), поиск по имени(findbyname), поиск по году(findbyyear)
+есть класс   book, для реализация класса используется метод book, и переопределение tostring
+c помощью функции getall() мы получаем массив книг
+eсть клас libraryhandler, он включает в себе методы как добавление книг(addbook), поиск книг(find book), удаление книг(remove book), показание библиотек(printlibrary), сортировка библиотек по имени(sortlibrarybyname) 
+
+в главном коде... 
+мы обявляем library как homelibrary() 
+ 	    handler как libraryhandler()
+
+здесь заданы число зависяшиеся от действий
+		Console.WriteLine("Library Menu:");
+                Console.WriteLine("1. Add book");
+                Console.WriteLine("2. Find book");
+                Console.WriteLine("3. Remove book");
+                Console.WriteLine("4. Print library");
+                Console.WriteLine("5. Sort by name");
+                Console.WriteLine("6. Sort by year");
+                Console.WriteLine("0. Exit");
+	
+с помощью этого кода    char key = Console.ReadKey().KeyChar; мы получим число которое пользователь ввел
+потом мы вызиваем методы которые соответсвует этому числу

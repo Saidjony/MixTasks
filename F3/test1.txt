@@ -1,0 +1,27 @@
+#include<math.h>  
+#include <iostream>
+#include <sstream>
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "russian");
+     
+
+    int t1_x, t1_y, t2_x, t2_y;
+    cout << "input coordinate of points x1,y1,x2,y2" << endl;
+    cin >> t1_x>> t1_y>> t2_x>> t2_y;
+
+    int radius;
+    cout << "input radius of circle" << endl;
+    cin >> radius;
+    
+    double d = sqrt(pow((t1_x - t2_x), 2) + pow((t1_y - t2_y), 2));
+    if (d <= 2 * radius)
+        cout << "точки принадлежить в окружности\n";
+    else
+        cout << "точки не принадлежить в окружности\n";
+
+    system("pause");
+    return 0;
+} 
+ 

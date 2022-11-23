@@ -1,0 +1,16 @@
+D:\fork\2048\console\game2048console\game2048console\bin\Debug\net5.0\game2048console.exe
+D:\fork\2048\console\game2048console\game2048console\bin\Debug\net5.0\game2048console.deps.json
+D:\fork\2048\console\game2048console\game2048console\bin\Debug\net5.0\game2048console.runtimeconfig.json
+D:\fork\2048\console\game2048console\game2048console\bin\Debug\net5.0\game2048console.runtimeconfig.dev.json
+D:\fork\2048\console\game2048console\game2048console\bin\Debug\net5.0\game2048console.dll
+D:\fork\2048\console\game2048console\game2048console\bin\Debug\net5.0\ref\game2048console.dll
+D:\fork\2048\console\game2048console\game2048console\bin\Debug\net5.0\game2048console.pdb
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\game2048console.vbproj.AssemblyReference.cache
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\game2048console.GeneratedMSBuildEditorConfig.editorconfig
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\game2048console.AssemblyInfoInputs.cache
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\game2048console.AssemblyInfo.vb
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\game2048console.vbproj.CoreCompileInputs.cache
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\game2048console.dll
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\ref\game2048console.dll
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\game2048console.pdb
+D:\fork\2048\console\game2048console\game2048console\obj\Debug\net5.0\game2048console.genruntimeconfig.cache

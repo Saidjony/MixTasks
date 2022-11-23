@@ -1,0 +1,26 @@
+#include <iostream>
+#include<math.h>
+ 
+using namespace std;
+int main()
+{
+    setlocale(LC_ALL, "ru"); //подключаем русскую букву
+     
+    int** A=new int*[5]; //создаем 2 мерный массив размера 5х5
+    for (size_t i = 0; i < 5; i++) //цикл для инициализации массива
+    { 
+        A[i] = new int[5];
+        for (size_t j = 0; j < 5; j++)
+        { 
+            A[i][j] = i + 2*j; //каждий элемент массива i+2*j
+            cout << A[i][j] << " "; // вывод массива
+        }
+        cout << endl;
+    }
+    
+   
+     
+    system("pause");
+    return 0;
+}
+ 

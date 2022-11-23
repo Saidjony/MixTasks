@@ -1,0 +1,83 @@
+//задания 1 из 4
+program Hello;
+var 
+  worktime,count: integer;
+begin
+  writeln('вводите объём работ(в часах)');
+  readln(worktime);
+  writeln('вводите кол-во рабочих');
+  readln(count);
+  
+  write ('средная загруженность членов бригады = ');
+  writeln(worktime/count);
+end.
+
+
+
+
+
+
+
+//задания 2 из 4
+program Hello;
+var 
+  x,y: integer;
+begin
+  writeln('вводите x');
+  readln(x);
+  writeln('вводите y');
+  readln(y);
+  if x>y then begin writeln('X>Y'); end;
+  if x<y then begin writeln('X<Y'); end;
+  if x=y then begin writeln('X=Y'); end;
+end.
+
+
+//задания 1 из 5
+program Hello;
+var x: real;
+begin
+  x:=1;
+  for var i:=10 to 20 do begin
+    write('x='+x);
+    write('     f(x)=');
+    writeln((Cos(3*(x/10))*Cos(3*(x/10))/2*(x/10))+exp(ln (Tan(5*(x/10)))/5));
+    x:=x+0.1;
+  end;
+end.
+
+
+
+// задания 2 из 5
+program Hello;
+var x: real;
+begin
+  x:=1;
+  for var i:=1 to 30 do begin
+     x:=x*Ln(Abs(Cos(i)));
+  end;
+  write('x = ');
+  writeln(x);
+end.
+
+
+
+// задания 5 из 5
+program Hello;
+var x: integer;
+var sum,t: real;
+begin
+  readln(x);
+    
+  for var i:=1 to x do begin
+    write('вводите элемент последовательности ');
+      read(t);
+      if t>0 then sum:=sum+t;
+  end; 
+  write('квадратный корень из суммы положительных элементов данной конечности = ');
+  writeln(Sqrt(sum));
+end.
+
+
+
+
